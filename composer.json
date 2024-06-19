@@ -1,0 +1,20 @@
+{
+    "name": "luan/project-1",
+    "autoload": {
+        "psr-4": {
+            "Luan\\Project1\\": "src/",
+            "Luan\\Project1\\Phpmailer\\": "vendor/"
+        }
+    },
+    "authors": [
+        {
+            "name": "luanptph42636",
+            "email": "149581561+Luanptph42636@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "phroute/phroute": "^2.2",
+        "eftec/bladeone": "^4.13",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

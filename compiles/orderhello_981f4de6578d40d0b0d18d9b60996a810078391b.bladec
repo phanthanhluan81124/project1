@@ -1,0 +1,5 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $_shouldextend[2]=1; ?>
+
+<?php if (isset($_shouldextend[2])) { echo $this->runChild('layouts.master'); } ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild("layouts.master"); } ?>

@@ -1,0 +1,268 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('content'); ?>
+ <div class="container">
+ <?php if(isset($infoVoucher)): ?>
+ <h1>Sửa Voucher</h1>
+ <?php else: ?>
+ <h1>Thêm Voucher</h1>
+ <?php endif; ?>
+
+ <h6>
+ <?php if(isset($mess)): ?>
+ <?php echo \htmlentities($mess??'', ENT_QUOTES, 'UTF-8', false); ?>
+
+ <?php endif; ?>
+ </h6>
+ <form action="" id="form_voucher" method="POST">
+ <div class="row">
+ <div class="col-6">
+ <div class="mb-3">
+ <label for="exampleFormControlInput1" class="form-label">Mã Giảm Giá</label>
+ <input type="text" class="form-control" id="code_voucher" placeholder="mã giảm giá" name="code"
+ value="<?php if(isset($data['code'])): ?> <?php echo \htmlentities($data['code']??'', ENT_QUOTES, 'UTF-8', false); ?> <?php elseif(isset($infoVoucher)): ?><?php echo \htmlentities($infoVoucher->code??'', ENT_QUOTES, 'UTF-8', false); ?> <?php endif; ?>">
+ <span class="text-danger">
+ <?php if(isset($error)): ?>
+ <?php echo \htmlentities($error['code']??'', ENT_QUOTES, 'UTF-8', false); ?>
+
+ <?php endif; ?>
+ </span>
+ </div>
+
+ <div class="mb-3">
+ <label for="exampleFormControlInput1" class="form-label">Kiểu Giảm Giá</label>
+ <select name="category_code" id="category_code" class="form-control">
+ <option value="" selected>---Kiểu Giảm Giá---</option>
+ <option value="0"
+ <?php if(isset($data['category_code']) && $data['category_code'] == 0): ?> selected <?php elseif(isset($infoVoucher) && $infoVoucher->category_code == 0): ?> selected <?php endif; ?>>
+ Giảm theo giá tiền
+ </option>
+ <option value="1"
+ <?php if(isset($data['category_code']) && $data['category_code'] == 1): ?> selected <?php elseif(isset($infoVoucher) && $infoVoucher->category_code == 1): ?> selected <?php endif; ?>>
+ Giảm theo phần trăm
+ </option>
+ </select>
+ <span id="errorCategoryCode" class="text-danger"></span>
+ </div>
+ <div class="mb-3">
+ <label for="exampleFormControlInput1" class="form-label">Số Lượng Giảm</label>
+ <input type="text" class="form-control" id="value" placeholder="số lượng giảm % hoặc đ"
+ name="value"
+ value="<?php if(isset($data['value'])): ?> <?php echo \htmlentities($data['value']??'', ENT_QUOTES, 'UTF-8', false); ?> <?php elseif(isset($infoVoucher)): ?><?php echo \htmlentities($infoVoucher->value??'', ENT_QUOTES, 'UTF-8', false); ?> <?php endif; ?>">
+ <span id="errorValue" class="text-danger"></span>
+ </div>
+
+ </div>
+ <div class="col-6">
+ <div class="mb-3">
+ <label for="exampleFormControlInput1" class="form-label">Ngày Bắt Đầu</label>
+ <?php if(isset($infoVoucher)): ?>
+ <div class="row">
+ <div class="col-8">
+ <input type="text" class="form-control" id="value_start"
+ value="<?php echo \htmlentities($infoVoucher->date_start??'', ENT_QUOTES, 'UTF-8', false); ?>"disabled>
+ <input type="datetime-local" class="form-control mt-2" id="date_start" name="date_start"
+ hidden>
+ </div>
+ <div class="col-4"> <button type="button" class="btn btn-dark" id="editDate1">sửa</button>
+ </div>
+ </div>
+ <?php else: ?>
+ <input type="datetime-local" class="form-control" id="date_start" name="date_start">
+ <?php endif; ?>
+ <span id="errorStart" class="text-danger"></span>
+ </div>
+ <div class="mb-3">
+ <label for="exampleFormControlInput1" class="form-label">Ngày Kết Thúc</label>
+ <?php if(isset($infoVoucher)): ?>
+ <div class="row">
+ <div class="col-8">
+ <input type="text" class="form-control" id="value_end" value="<?php echo \htmlentities($infoVoucher->date_end??'', ENT_QUOTES, 'UTF-8', false); ?>"
+ disabled>
+ <input type="datetime-local" class="form-control mt-2" id="date_end" name="date_end"
+ hidden>
+ </div>
+ <div class="col-4"> <button type="button" class="btn btn-dark" id="editDate2">sửa</button>
+ </div>
+ </div>
+ <?php else: ?>
+ <input type="datetime-local" class="form-control" id="date_end" name="date_end">
+ <?php endif; ?>
+ <span id="errorEnd" class="text-danger"></span>
+ </div>
+ <div class="mb-3">
+ <label for="exampleFormControlInput1" class="form-label">Số Lượng Mã</label>
+ <input type="text" class="form-control" id="quantity" placeholder="số lượng mã " name="quantity"
+ value="<?php if(isset($data['quantity'])): ?> <?php echo \htmlentities($data['quantity']??'', ENT_QUOTES, 'UTF-8', false); ?> <?php elseif(isset($infoVoucher)): ?><?php echo \htmlentities($infoVoucher->quantity??'', ENT_QUOTES, 'UTF-8', false); ?> <?php endif; ?>">
+ <span id="errorQuantity" class="text-danger"></span>
+ </div>
+ </div>
+ </div>
+ <br>
+ <?php if(isset($infoVoucher)): ?>
+ <input type="text" name="update" hidden>
+ <button type="submit" class="btn btn-success">Sửa</button>
+ <?php else: ?>
+ <input type="text" name="add" hidden>
+ <button type="submit" class="btn btn-success">Thêm Mới</button>
+ <?php endif; ?>
+ <a href="<?php echo \htmlentities(BASE_URL . 'admin/list-voucher'??'', ENT_QUOTES, 'UTF-8', false); ?>"><button type="button" class="btn btn-primary">Danh
+ Sách</button></a>
+ </form>
+ <p id="checked" hidden></p>
+ </div>
+ <?php if(isset($infoVoucher)): ?>
+ <script>
+ const btn1 = document.getElementById('editDate1');
+ const btn2 = document.getElementById('editDate2');
+ btn1.addEventListener('click', function(event) {
+ document.getElementById('date_start').hidden = false;
+ })
+ btn2.addEventListener('click', function(event) {
+ document.getElementById('date_end').hidden = false;
+ })
+
+
+ const now = new Date();
+ const btn = document.getElementById('form_voucher');
+ btn.addEventListener('submit', function(event) {
+ event.preventDefault();
+ const category_code = document.getElementById('category_code').value;
+ const code = document.getElementById('code_voucher').value;
+ const value1 = document.getElementById('value').value;
+ if (document.getElementById('date_start').hidden == false) {
+ const date_start = document.getElementById('date_start').value;
+ }else{
+ const date_start = document.getElementById('value_start').value;
+ 
+ }
+ if (document.getElementById('date_end').hidden == false) {
+ const date_end = document.getElementById('date_end').value;
+ }else{
+ const date_end = document.getElementById('value_end').value;
+ }
+ const quantity = document.getElementById('quantity').value;
+ const datetime_local = new Date(Date.parse(date_start.value));
+ const datetime_local1 = new Date(Date.parse(date_end));
+ document.getElementById('errorValue').innerHTML = "";
+ document.getElementById('errorQuantity').innerHTML = "";
+ document.getElementById('errorStart').innerHTML = "";
+ document.getElementById('errorEnd').innerHTML = "";
+ document.getElementById('checked').innerHTML = 'true';
+ console.log(date_start);
+ // console.log(date_start.value, date_end);
+ if (category_code == "" || code == "" || value1 == "" || quantity == "") {
+ alert("Vui Lòng Nhập Đầy Đủ Thông Tin");
+ document.getElementById('checked').innerHTML = 'false';
+ } else if (category_code != "" && code != "" && value1 != "" && quantity != "") {
+ document.getElementById('checked').innerHTML = 'false';
+ if (!isNaN(value1) && value1 < 1) {
+ document.getElementById('errorValue').innerHTML = "Số lượng giảm phải lớn hơn 0";
+ } else if (category_code == 1 && value1 > 100) {
+ document.getElementById('errorValue').innerHTML =
+ "Số lượng giảm theo phần trăm phải hớn hơn 1 và nhỏ hơn 100";
+ } else if (isNaN(value1)) {
+ document.getElementById('errorValue').innerHTML = "Số lượng giảm phải là số";
+ }
+ if (!isNaN(quantity) && quantity < 1) {
+ document.getElementById('errorQuantity').innerHTML = "Số lượng mã giảm giá phải lớn hơn 0";
+ } else if (isNaN(quantity)) {
+ document.getElementById('errorQuantity').innerHTML = "Số lượng mã giảm giá phải là số";
+ }
+ if (document.getElementById('date_start').hidden == false) {
+ if (now > datetime_local) {
+ document.getElementById('errorStart').innerHTML = "Ngày bắt đầu phải lơn hơn hiện tại";
+ }
+ }
+ if (document.getElementById('date_end').hidden == false) {
+ if (date_start.value > date_end) {
+ document.getElementById('errorEnd').innerHTML = "Ngày kết thúc phải lớn hơn ngày bắt đầu ";
+ }
+ }
+ if ((document.getElementById('date_start').hidden == false) && (document.getElementById('date_end')
+ .hidden == false)) {
+ if (value1 > 1 && now < datetime_local && date_start.value < date_end) {
+ if (category_code == 1 && value1 < 100) {
+ document.getElementById('checked').innerHTML = 'true';
+ } else {
+ document.getElementById('checked').innerHTML = 'true';
+ }
+ }
+ }
+ if (document.getElementById('date_start').hidden == true && document.getElementById('date_end')
+ .hidden == true) {
+ if (value1 > 1 && now < datetime_local && date_start.value < date_end) {
+ if (category_code == 1 && value1 < 100) {
+ document.getElementById('checked').innerHTML = 'true';
+ } else {
+ document.getElementById('checked').innerHTML = 'true';
+ }
+ }
+ }
+ }
+ if (document.getElementById('checked').innerText == 'true') {
+ btn.submit();
+ }
+ })
+ </script>
+ <?php else: ?>
+ <script>
+ const now = new Date();
+ const btn = document.getElementById('form_voucher');
+ btn.addEventListener('submit', function(event) {
+ event.preventDefault();
+ const category_code = document.getElementById('category_code').value;
+ const code = document.getElementById('code_voucher').value;
+ const value1 = document.getElementById('value').value;
+ const date_start = document.getElementById('date_start').value;
+ const date_end = document.getElementById('date_end').value;
+ const quantity = document.getElementById('quantity').value;
+ const datetime_local = new Date(Date.parse(date_start));
+ const datetime_local1 = new Date(Date.parse(date_end));
+ document.getElementById('errorValue').innerHTML = "";
+ document.getElementById('errorQuantity').innerHTML = "";
+ document.getElementById('errorStart').innerHTML = "";
+ document.getElementById('errorEnd').innerHTML = "";
+ if (category_code == "" || code == "" || value1 == "" || date_start == "" || date_end == "" ||
+ quantity == "") {
+ alert("Vui Lòng Nhập Đầy Đủ Thông Tin");
+ document.getElementById('checked').innerHTML = 'false';
+ } else if (category_code != "" && code != "" && value1 != "" && date_start != "" && date_end != "" &&
+ quantity != "") {
+ document.getElementById('checked').innerHTML = 'false';
+ if (!isNaN(value1) && value1 < 1) {
+ document.getElementById('errorValue').innerHTML = "Số lượng giảm phải lớn hơn 0";
+ } else if (category_code == 1 && value1 > 100) {
+ document.getElementById('errorValue').innerHTML =
+ "Số lượng giảm theo phần trăm phải hớn hơn 1 và nhỏ hơn 100";
+ } else if (isNaN(value1)) {
+ document.getElementById('errorValue').innerHTML = "Số lượng giảm phải là số";
+ }
+ if (!isNaN(quantity) && quantity < 1) {
+ document.getElementById('errorQuantity').innerHTML = "Số lượng mã giảm giá phải lớn hơn 0";
+ } else if (isNaN(quantity)) {
+ document.getElementById('errorQuantity').innerHTML = "Số lượng mã giảm giá phải là số";
+ }
+ if (now > datetime_local) {
+ document.getElementById('errorStart').innerHTML = "Ngày bắt đầu phải lơn hơn hiện tại";
+ }
+ if (date_start > date_end) {
+ document.getElementById('errorEnd').innerHTML = "Ngày kết thúc phải lớn hơn ngày bắt đầu ";
+ }
+ if (value1 > 1 && now < datetime_local && date_start < date_end) {
+ if (category_code == 1 && value1 < 100) {
+ document.getElementById('checked').innerHTML = 'true';
+ } else {
+ document.getElementById('checked').innerHTML = 'true';
+ }
+ }
+ }
+ if (document.getElementById('checked').innerText == 'true') {
+ btn.submit();
+ }
+ })
+ </script>
+ <?php endif; ?>
+<?php $this->stopSection(); ?>
+
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.master'); } ?>
