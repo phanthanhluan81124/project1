@@ -145,28 +145,28 @@ CREATE TABLE `order` (
 --
 
 INSERT INTO `order` (`order_id`, `user_id`, `fullname`, `email`, `tel`, `address`, `total`, `total_discount`, `payment_method`, `status`, `created_at`, `updated_at`, `note`) VALUES
-(1, 4, 'Ma Văn Khải', 'khaimv13@gmai.com', '0346315304', '61 ngõ 177 Cầu Diễn, Phúc Diễn, Bắc Từ Liêm, Hà Nội', 3300000, '3000000', 'cod', 'delivered', '2023-11-22 16:59:25', '0000-00-00 00:00:00', ''),
-(2, 4, 'Ma Văn Khải ', 'khaimv13@gmail.com', '0865969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 19800000, '9900000', 'cod', 'pending', '2024-04-25 03:21:20', '2024-04-25 03:21:20', ''),
-(10, 4, 'Ma Văn Khải ', 'khaimv13@gmail.com', '0865969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 19800000, '19800000', 'cod', 'pending', '2024-04-25 09:40:27', '2024-04-25 09:40:27', ''),
-(11, 4, 'Ma Văn Khải ', 'khaimv13@gmail.com', '0865969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 19800000, '19800000', 'cod', 'pending', '2024-04-25 09:40:37', '2024-04-25 09:40:37', ''),
-(12, 4, 'Ma Văn Khải ', 'khaimv13@gmail.com', '0865969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 19800000, '19800000', 'cod', 'pending', '2024-04-25 09:42:06', '2024-04-25 09:42:06', ''),
-(13, 4, 'Ma Văn Khải ', 'khaimv13@gmail.com', '0865969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 19800000, '19800000', 'cod', 'pending', '2024-04-25 09:43:03', '2024-04-25 09:43:03', ''),
-(14, 5, 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 13000000, '13000000', 'cod', 'processing', '2024-05-04 08:19:04', '2024-05-04 09:10:41', ''),
-(16, 5, 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 3300000, '3300000', 'cod', 'canceled', '2024-05-03 03:40:55', '2024-05-03 03:40:55', ''),
-(17, 5, 'Phan Thành Luân  ', 'phanthanhluana8@gmail.com', '0865969204', 'Hà Nội', 44200000, '44200000', 'cod', 'pending', '2024-05-15 09:10:22', '2024-05-15 09:10:22', ''),
-(18, 1, 'Phan Thành Luân ', 'luanptph42636@fpt.edu.vn', '0865969204', '17- Nam sông hồng', 19800000, '19800000', 'cod', 'pending', '2024-05-15 09:12:20', '2024-05-15 09:12:20', ''),
-(19, 5, 'Phan Thành Luân  ', 'phanthanhluana8@gmail.com', '0865969204', 'Hà Nội', 19800000, '19800000', 'cod', 'pending', '2024-05-15 09:17:33', '2024-05-15 09:17:33', ''),
-(20, 5, 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 13200000, '13200000', 'cod', 'canceled', '2024-05-22 09:27:37', '2024-05-22 09:28:09', ''),
-(21, 5, 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 35400000, '35400000', 'cod', 'pending', '2024-05-25 14:05:48', '2024-05-25 14:05:48', ''),
-(22, 5, 'Phan Thành Luân ', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 11400000, '11300000', 'cod', 'pending', '2024-05-26 09:39:30', '2024-05-26 09:39:30', ''),
-(23, 5, 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 19200000, '19200000', 'cod', 'pending', '2024-05-27 07:43:02', '2024-05-27 07:43:02', ''),
-(24, 5, 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 19200000, '19200000', 'cod', 'pending', '2024-05-27 07:43:02', '2024-05-27 07:43:02', ''),
-(25, 5, 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 24000000, '2400000', 'cod', 'pending', '2024-05-27 09:06:48', '2024-05-27 09:06:48', ''),
-(26, 5, 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 24000000, '2400000', 'cod', 'pending', '2024-05-27 09:06:48', '2024-05-27 09:06:48', ''),
-(27, 5, 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 9600000, '4800000', 'cod', 'canceled', '2024-05-27 09:39:14', '2024-05-27 09:39:14', ''),
-(28, 5, 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '0865969204', '17- Nam sông hồng', 4800000, '2400000', 'cod', 'shiped', '2024-05-27 09:49:44', '2024-05-27 09:49:44', ''),
-(29, 36, 'Phan Thành Luân ', 'phanthanhluana81@gmail.com', '0865969204', '17- Nam sông hồng', 7100000, '7100000', 'banking', 'pending', '2024-06-08 15:19:03', '2024-06-08 15:19:03', ''),
-(30, 36, 'Phan Thành Luân ', 'phanthanhluana81@gmail.com', '0865969204', '17- Nam sông hồng', 7100000, '7100000', 'banking', 'pending', '2024-06-08 15:19:03', '2024-06-08 15:19:03', '');
+(1, 4, 'Ma Văn Khải', 'khaimv13331@gmai.com', '03541315304', '61 ngõ 177 Cầu Diễn, Phúc Diễn, Bắc Từ Liêm, Hà Nội', 3300000, '3000000', 'cod', 'delivered', '2023-11-22 16:59:25', '0000-00-00 00:00:00', ''),
+(2, 4, 'Ma Văn Khải ', 'khaimv13331@gmail.com', '0845969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 19800000, '9900000', 'cod', 'pending', '2024-04-25 03:21:20', '2024-04-25 03:21:20', ''),
+(10, 4, 'Ma Văn Khải ', 'khaimv13331@gmail.com', '0825969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 19800000, '19800000', 'cod', 'pending', '2024-04-25 09:40:27', '2024-04-25 09:40:27', ''),
+(11, 4, 'Ma Văn Khải ', 'khaimv13331@gmail.com', '0825969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 19800000, '19800000', 'cod', 'pending', '2024-04-25 09:40:37', '2024-04-25 09:40:37', ''),
+(12, 4, 'Ma Văn Khải ', 'khaimv13331@gmail.com', '0825969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 19800000, '19800000', 'cod', 'pending', '2024-04-25 09:42:06', '2024-04-25 09:42:06', ''),
+(13, 4, 'Ma Văn Khải ', 'khaimv13331@gmail.com', '0825969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 19800000, '19800000', 'cod', 'pending', '2024-04-25 09:43:03', '2024-04-25 09:43:03', ''),
+(14, 5, 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 13000000, '13000000', 'cod', 'processing', '2024-05-04 08:19:04', '2024-05-04 09:10:41', ''),
+(16, 5, 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 3300000, '3300000', 'cod', 'canceled', '2024-05-03 03:40:55', '2024-05-03 03:40:55', ''),
+(17, 5, 'Phan Thành Luân  ', 'phanthanhluana18@gmail.com', '0825969204', 'Hà Nội', 44200000, '44200000', 'cod', 'pending', '2024-05-15 09:10:22', '2024-05-15 09:10:22', ''),
+(18, 1, 'Phan Thành Luân ', 'luanptph42636@fpt.edu.vn', '0825969204', '17- Nam sông hồng', 19800000, '19800000', 'cod', 'pending', '2024-05-15 09:12:20', '2024-05-15 09:12:20', ''),
+(19, 5, 'Phan Thành Luân  ', 'phanthanhluana18@gmail.com', '0825969204', 'Hà Nội', 19800000, '19800000', 'cod', 'pending', '2024-05-15 09:17:33', '2024-05-15 09:17:33', ''),
+(20, 5, 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 13200000, '13200000', 'cod', 'canceled', '2024-05-22 09:27:37', '2024-05-22 09:28:09', ''),
+(21, 5, 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 35400000, '35400000', 'cod', 'pending', '2024-05-25 14:05:48', '2024-05-25 14:05:48', ''),
+(22, 5, 'Phan Thành Luân ', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 11400000, '11300000', 'cod', 'pending', '2024-05-26 09:39:30', '2024-05-26 09:39:30', ''),
+(23, 5, 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 19200000, '19200000', 'cod', 'pending', '2024-05-27 07:43:02', '2024-05-27 07:43:02', ''),
+(24, 5, 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 19200000, '19200000', 'cod', 'pending', '2024-05-27 07:43:02', '2024-05-27 07:43:02', ''),
+(25, 5, 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 24000000, '2400000', 'cod', 'pending', '2024-05-27 09:06:48', '2024-05-27 09:06:48', ''),
+(26, 5, 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 24000000, '2400000', 'cod', 'pending', '2024-05-27 09:06:48', '2024-05-27 09:06:48', ''),
+(27, 5, 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 9600000, '4800000', 'cod', 'canceled', '2024-05-27 09:39:14', '2024-05-27 09:39:14', ''),
+(28, 5, 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '0825969204', '17- Nam sông hồng', 4800000, '2400000', 'cod', 'shiped', '2024-05-27 09:49:44', '2024-05-27 09:49:44', ''),
+(29, 36, 'Phan Thành Luân ', 'phanthanhluana81@gmail.com', '0825969204', '17- Nam sông hồng', 7100000, '7100000', 'banking', 'pending', '2024-06-08 15:19:03', '2024-06-08 15:19:03', ''),
+(30, 36, 'Phan Thành Luân ', 'phanthanhluana81@gmail.com', '0825969204', '17- Nam sông hồng', 7100000, '7100000', 'banking', 'pending', '2024-06-08 15:19:03', '2024-06-08 15:19:03', '');
 
 -- --------------------------------------------------------
 
@@ -286,7 +286,7 @@ INSERT INTO `products` (`id`, `product_name`, `product_image`, `product_price`, 
 (8, 'ADIDAS NMD_G1', 'G1.jpg', 2900000, NULL, NULL, 3, 0, 0, 1, '2023-11-14 03:48:24', '2023-11-14 04:00:44'),
 (9, 'ADIDAS RUN FALCON 2.0', 'FA.jpg', 1800000, NULL, NULL, 3, 0, 0, 1, '2023-11-14 03:48:24', '2023-11-14 04:00:44'),
 (10, 'ADIDAS SAMBA CLASSIC', 'SAM.jpg', 3200000, NULL, NULL, 3, 0, 0, 1, '2023-11-14 03:48:24', '2023-11-14 04:00:44'),
-(19, 'Giày bóng rổ nam Scoot Zeros Grey Frost', 'Scoot-Zeros-Grey-Frost-Men\'s-Basketball-Shoes (3).avif', 2400000, 2350000, 'Lấy cảm hứng từ phong cách chơi nhanh và đột phá của Scoot trên sân, đôi giày này lấy các yếu tố thiết kế từ thương hiệu Jaws của chúng tôi với lớp bọc cao su giống hàm ở đế ngoài thể hiện sự quyết liệt và bền bỉ của Scoot trên sân. Đây là đôi giày bóng rổ đặc trưng đầu tiên của Scoot Henderson và được thiết kế cho sự nhanh nhẹn, tốc độ và sự quyết tâm của anh nhờ đế giữa EVA có độ đàn hồi cao, mô hình lực kéo chống trượt ở đế ngoài và thân giày nhẹ. Tất cả đều được đánh dấu trong logo đặc trưng của Scoot.\r\nThân giày bằng vải tổng hợp, lưới và dệt mang lại cảm giác nhẹ nhàng\r\nNắp gót tổng hợp có chi tiết thêu\r\nHỗ trợ khóa biểu mẫu\r\nĐế giữa PROFOAM EVA\r\nĐế ngoài cao su bao phủ toàn bộ với mô hình lực kéo chống trượt\r\nLogo thương hiệu Scoot', 6, NULL, 0, 1, '2024-06-01 15:01:48', '2024-06-03 09:12:53');
+(19, 'Giày bóng rổ nam Scoot Zeros Grey Frost', 'Scoot-Zeros-Grey-Frost-Men\s-Basketball-Shoes (3).avif', 2400000, 2350000, 'Lấy cảm hứng từ phong cách chơi nhanh và đột phá của Scoot trên sân, đôi giày này lấy các yếu tố thiết kế từ thương hiệu Jaws của chúng tôi với lớp bọc cao su giống hàm ở đế ngoài thể hiện sự quyết liệt và bền bỉ của Scoot trên sân. Đây là đôi giày bóng rổ đặc trưng đầu tiên của Scoot Henderson và được thiết kế cho sự nhanh nhẹn, tốc độ và sự quyết tâm của anh nhờ đế giữa EVA có độ đàn hồi cao, mô hình lực kéo chống trượt ở đế ngoài và thân giày nhẹ. Tất cả đều được đánh dấu trong logo đặc trưng của Scoot.\r\nThân giày bằng vải tổng hợp, lưới và dệt mang lại cảm giác nhẹ nhàng\r\nNắp gót tổng hợp có chi tiết thêu\r\nHỗ trợ khóa biểu mẫu\r\nĐế giữa PROFOAM EVA\r\nĐế ngoài cao su bao phủ toàn bộ với mô hình lực kéo chống trượt\r\nLogo thương hiệu Scoot', 6, NULL, 0, 1, '2024-06-01 15:01:48', '2024-06-03 09:12:53');
 
 -- --------------------------------------------------------
 
@@ -397,9 +397,9 @@ INSERT INTO `products_image` (`image_id`, `product_id`, `image_name`) VALUES
 (47, 10, 'SAM2.jpg'),
 (48, 10, 'SAM3.jpg'),
 (49, 10, 'SAM4.jpg'),
-(57, 19, 'Scoot-Zeros-Grey-Frost-Men\'s-Basketball-Shoes (2).avif'),
-(58, 19, 'Scoot-Zeros-Grey-Frost-Men\'s-Basketball-Shoes (3).avif'),
-(60, 19, 'Scoot-Zeros-Grey-Frost-Men\'s-Basketball-Shoes.avif');
+(57, 19, 'Scoot-Zeros-Grey-Frost-Men\s-Basketball-Shoes (2).avif'),
+(58, 19, 'Scoot-Zeros-Grey-Frost-Men\s-Basketball-Shoes (3).avif'),
+(60, 19, 'Scoot-Zeros-Grey-Frost-Men\s-Basketball-Shoes.avif');
 
 -- --------------------------------------------------------
 
@@ -425,12 +425,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `fullname`, `email`, `password`, `tel`, `address`, `avatar`, `role`, `status`) VALUES
-(1, 'Admin', 'Phan Thành Luân', 'luanptph42636@fpt.edu.vn', 'hello1234', '0865969204', '17- Nam sông hồng', '2.jpg', 'manager', 'active'),
-(2, 'customer', 'customer', 'customer@gmail.com', 'customer', '', '', '', 'customer', 'active'),
-(4, 'khaimv13', 'Ma Văn Khải', 'khaimv13@gmail.com', 'khai', '0865969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 'khainopro.jpg', 'admin', 'active'),
-(5, 'luanpt11', 'Phan Thành Luân', 'phanthanhluana8@gmail.com', '1234567890', '0865969204', '', '6.jpg', 'customer', 'active'),
-(35, 'luanpt111', NULL, 'luana8@gmail.com', 'luan12341', NULL, NULL, NULL, 'customer', 'active'),
-(36, 'luanpt112', 'Phan Thành Luân', 'phanthanhluana81@gmail.com', '$2y$10$Iqe2YJpBycI01jQ8Zcbq5ezfRX5a0aUuZyOGpqW2Ll9.ZVAPDThcu', '0865969204', '17- Nam sông hồng', '550AEACE-8837-4075-B0D2-FD0757175A40 (1).jpeg', 'manager', 'active');
+(1, 'Admin', 'Phan Thành Luân', 'luanptph42636@fpt.edu.vn', '$2y$10$Iqe2YJpBycI01jQ8Zcbq5ezfRX5a0aUuZyOGpqW2Ll9.ZVAPDThcu', '0825969204', '17- Nam sông hồng', '2.jpg', 'manager', 'active'),
+(2, 'customer', 'customer', 'customer@gmail.com', '$2y$10$Iqe2YJpBycI01jQ8Zcbq5ezfRX5a0aUuZyOGpqW2Ll9.ZVAPDThcu', '', '', '', 'customer', 'active'),
+(4, 'khaimv13331', 'Ma Văn Khải', 'khaimv13331@gmail.com', '$2y$10$Iqe2YJpBycI01jQ8Zcbq5ezfRX5a0aUuZyOGpqW2Ll9.ZVAPDThcu', '0825969204', 'Kim Tân, Kim Phượng, Định Hóa, Thái Nguyên', 'khainopro.jpg', 'admin', 'active'),
+(5, 'luanpt11', 'Phan Thành Luân', 'phanthanhluana18@gmail.com', '$2y$10$Iqe2YJpBycI01jQ8Zcbq5ezfRX5a0aUuZyOGpqW2Ll9.ZVAPDThcu', '0825969204', '', '6.jpg', 'customer', 'active'),
+(35, 'luanpt111', NULL, 'luana8@gmail.com', '$2y$10$Iqe2YJpBycI01jQ8Zcbq5ezfRX5a0aUuZyOGpqW2Ll9.ZVAPDThcu', NULL, NULL, NULL, 'customer', 'active'),
+(36, 'luanpt112', 'Phan Thành Luân', 'phanthanhluana81@gmail.com', '$2y$10$Iqe2YJpBycI01jQ8Zcbq5ezfRX5a0aUuZyOGpqW2Ll9.ZVAPDThcu', '0825969204', '17- Nam sông hồng', '550AEACE-8837-4075-B0D2-FD0757175A40 (1).jpeg', 'manager', 'active');
 
 -- --------------------------------------------------------
 
